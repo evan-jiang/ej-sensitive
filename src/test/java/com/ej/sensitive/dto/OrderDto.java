@@ -2,7 +2,7 @@ package com.ej.sensitive.dto;
 
 import java.math.BigDecimal;
 
-public class OrderDto {
+public class OrderDto extends SensitiveDto{
     private String orderNo;
     private BigDecimal amount;
     private UserDto userDto;

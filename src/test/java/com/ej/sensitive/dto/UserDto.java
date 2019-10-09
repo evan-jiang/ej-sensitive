@@ -3,7 +3,7 @@ package com.ej.sensitive.dto;
 import com.ej.sensitive.annotation.Sensitive;
 import com.ej.sensitive.enums.SensitiveType;
 
-public class UserDto {
+public class UserDto extends SensitiveDto{
 
     private int age;
     @Sensitive(SensitiveType.NAME)

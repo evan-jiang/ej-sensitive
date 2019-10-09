@@ -30,6 +30,8 @@ public class Test {
         orders.add(orderDto);
         System.out.println(JSON.toJSONString(orders));
         System.out.println(JSON.toJSONString(orders,new SensitiveFilter()));
+        System.out.println(orderDto.toLogString());
+        System.out.println(orderDto.toString());
     }
 
     @org.junit.Test
