@@ -3,9 +3,9 @@ package com.ej.sensitive.enums;
 public enum SensitiveType {
 
     NAME() {
-        private static final String REGEX_1 = "^(\\w{1})\\w*$";
+        private static final String REGEX_1 = "^([\\u4e00-\\u9fa5_\\w]{1})[\\u4e00-\\u9fa5_\\w]*$";
         private static final String REPLACEMENT_1 = "$1*";
-        private static final String REGEX_2 = "^(\\w{1})\\w*(\\w{1})$";
+        private static final String REGEX_2 = "^([\\u4e00-\\u9fa5_\\w]{1})[\\u4e00-\\u9fa5_\\w_\\s]*([\\u4e00-\\u9fa5_\\w]{1})$";
         private static final String REPLACEMENT_2 = "$1*$2";
         private static final String START = "*";
         public String convert(String oldValue) {

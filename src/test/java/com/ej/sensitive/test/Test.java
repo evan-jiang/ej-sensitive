@@ -13,7 +13,7 @@ public class Test {
     public void example(){
         UserDto userDto = new UserDto();
         userDto.setAge(29);
-        userDto.setName("张三");
+        userDto.setName("张三丰");
         userDto.setBankCardNo("6222022000022222222");
         userDto.setCertiNo("430722199011111717");
         userDto.setPhoneNo("18888888888");
@@ -42,8 +42,9 @@ public class Test {
 
     @org.junit.Test
     public void t1(){
-        String value = "430722198811150719";
-        System.out.println(value.replaceAll("^(\\d{4})\\d{8,10}(\\d{4}|(\\d{3}(X|x)))$", "$1****$2"));
-        System.out.println(value.replaceAll("^(\\d{3})\\d*(\\d{3})$", "$1****$2"));
+        String value = "张三";
+        String regex = "^(\\w{1})\\w*$";
+        regex = "^([\\u4e00-\\u9fa5_\\w]{1})[\\u4e00-\\u9fa5_\\w]*([\\u4e00-\\u9fa5_\\w]{1})$";
+        System.out.println(value.replaceAll(regex,"$1*$2"));
     }
 }

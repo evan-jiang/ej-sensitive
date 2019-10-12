@@ -95,7 +95,7 @@ public class Test {
     public void example(){
         UserDto userDto = new UserDto();
         userDto.setAge(29);
-        userDto.setName("张三");
+        userDto.setName("张三丰");
         userDto.setBankCardNo("6222022000022222222");
         userDto.setCertiNo("430722199011111717");
         userDto.setPhoneNo("18888888888");
@@ -106,5 +106,5 @@ public class Test {
 ```
 **运行结果**
 ```json
-{"age":29,"bankCardNo":"6222****2222","certiNo":"4307****1717","name":"张三","otherInfo":"*","phoneNo":"188****888"}
+{"age":29,"bankCardNo":"6222****2222","certiNo":"4307****1717","name":"张*丰","otherInfo":"*","phoneNo":"188****888"}
 ```
