@@ -79,7 +79,7 @@ public class UserDto extends SensitiveDto{
 }
 ```
 
-## 运行
+## 实例
 **实例代码**
 ```java
 package com.ej.sensitive.test;
