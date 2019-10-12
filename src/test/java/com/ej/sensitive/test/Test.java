@@ -1,16 +1,25 @@
 package com.ej.sensitive.test;
 
-import com.alibaba.fastjson.JSON;
 import com.ej.sensitive.dto.OrderDto;
 import com.ej.sensitive.dto.UserDto;
-import com.ej.sensitive.filter.SensitiveFilter;
-import com.sun.org.apache.xpath.internal.operations.Or;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Test {
+
+    @org.junit.Test
+    public void example(){
+        UserDto userDto = new UserDto();
+        userDto.setAge(29);
+        userDto.setName("张三");
+        userDto.setBankCardNo("6222022000022222222");
+        userDto.setCertiNo("430722199011111717");
+        userDto.setPhoneNo("18888888888");
+        userDto.setOtherInfo("Hello World");
+        System.out.println(userDto.toLogString());
+    }
 
     @org.junit.Test
     public void test(){
@@ -28,10 +37,7 @@ public class Test {
         orderDto.setUserDto(userDto);
         List<OrderDto> orders = new ArrayList<>();
         orders.add(orderDto);
-        System.out.println(JSON.toJSONString(orders));
-        System.out.println(JSON.toJSONString(orders,new SensitiveFilter()));
         System.out.println(orderDto.toLogString());
-        System.out.println(orderDto.toString());
     }
 
     @org.junit.Test
